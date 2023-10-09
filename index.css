@@ -1,0 +1,22 @@
+:root {
+  --main-bg-color: rgb(35, 35, 35);
+  --main-text-color: #f9faffde;
+  --shadow-color: #858ebc;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  text-shadow: var(--shadow-color) -2px 2px 8px;
+  margin: 0 auto;
+}
+
+div {
+  text-align: center;
+}
