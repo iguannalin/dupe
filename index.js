@@ -6,14 +6,19 @@ window.addEventListener("load", () => {
   }
 
   function display() {
-    const slashes = window.location.search;
+    const slashes = window.location.hash;
     console.log(window.location);
-    if (slashes) console.log({slashes});
+    if (slashes) console.log({hash});
     const slash = 1;
     const meta = document.createElement("meta");
     meta.httpEquiv = "REFRESH";
     meta.content = "5";
-    meta.url = `https://iguannalin.github.io/dupe/index.html#${slash}`;
+
+    const url = new URL("https://iguannalin.github.io/dupe/");
+    url.hash = `#${slash}`
+    // params.append("q", slash);
+    console.log({url});
+    meta.url = url;
     // link.onclick = () => {
       // <meta HTTP-EQUIV="REFRESH" CONTENT="1; URL="></meta>
       document.head.appendChild(meta);
