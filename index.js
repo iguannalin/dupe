@@ -1,14 +1,15 @@
 window.addEventListener("load", () => {
-  function display() {
-    let title = Number(document.querySelector("title").innerText);
-    if (!title) title = 1; 
-    else title+=1;
+  let title = Number(document.querySelector("title").innerText);
+  if (!title) title = 1; 
+  else title+=1;
 
-    const container = document.getElementById("container");
-    const p = document.createElement("p");
-    // for (let i=0;i<title;i++)
-    p.innerText = Math.random()>0.5 ? "/" : "\\";
-    container.appendChild(p);
+  const container = document.getElementById("container");
+  const p = document.createElement("p");
+  // for (let i=0;i<title;i++)
+  p.innerText = Math.random()>0.5 ? "/" : "\\";
+  container.appendChild(p);
+
+  function redisplay() {
 
     const text = `<!doctypehtml><title>${title}</title><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=https://iguannalin.github.io/dupe/index.css rel=stylesheet><script src=https://iguannalin.github.io/dupe/index.js></script><div id=container></div>`;
     const blob = new Blob([text], {type: "text/html"});
@@ -17,5 +18,5 @@ window.addEventListener("load", () => {
     window.URL.revokeObjectURL(blobUrl);
   }
 
-  setTimeout(display, 1000);
+  setTimeout(redisplay, 1000);
 });
