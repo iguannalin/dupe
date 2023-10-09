@@ -13,7 +13,7 @@ window.addEventListener("load", () => {
     const meta = document.createElement("meta");
     meta.httpEquiv = "REFRESH";
     meta.content = "5";
-    meta.url = `https://iguannalin.github.io/dupe?slash=${slash}`;
+    meta.url = `https://iguannalin.github.io/dupe/index.html#${slash}`;
     // link.onclick = () => {
       // <meta HTTP-EQUIV="REFRESH" CONTENT="1; URL="></meta>
       document.head.appendChild(meta);
