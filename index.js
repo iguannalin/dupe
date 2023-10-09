@@ -17,5 +17,5 @@ window.addEventListener("load", () => {
     window.URL.revokeObjectURL(blobUrl);
   }
 
-  setTimeout(display, 100);
+  setTimeout(display, 1000);
 });
