@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
     meta.content = "5";
 
     const url = new URL("https://iguannalin.github.io/dupe");
-    url.hash = `#${slashes ? slashes++ : 0}`
+    url.hash = `#${slashes ? slashes++ : 1}`
     // params.append("q", slash);
     console.log({url});
     meta.url = url;
