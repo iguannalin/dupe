@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
 
     const container = document.getElementById("container");
     const p = document.createElement("p");
-    p.innerText = Math.random()>0.5 ? "/" : "\\";
+    for (let i=0;i<title;i++)p.innerText = Math.random()>0.5 ? "/" : "\\";
     container.appendChild(p);
 
     const text = `<!doctypehtml><title>${title}</title><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=https://iguannalin.github.io/dupe/index.css rel=stylesheet><script src=https://iguannalin.github.io/dupe/index.js></script><div id=container></div>`;
@@ -16,5 +16,5 @@ window.addEventListener("load", () => {
     window.URL.revokeObjectURL(blobUrl);
   }
 
-  display();
+  setTimeout(display, 100);
 });
