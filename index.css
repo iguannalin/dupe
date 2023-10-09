@@ -18,6 +18,5 @@ body {
 }
 
 div {
-  width: 12ch;
-  overflow-wrap: anywhere;
+  text-align: center;
 }
