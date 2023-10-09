@@ -9,10 +9,11 @@ window.addEventListener("load", () => {
     const slashes = window.location.search;
     console.log(window.location);
     if (slashes) console.log({slashes});
+    const slash = 1;
     const meta = document.createElement("meta");
     meta.httpEquiv = "REFRESH";
     meta.content = "5";
-    meta.url = "./?slash=1";
+    meta.url = `https://iguannalin.github.io/dupe?slash=${slash}`;
     // link.onclick = () => {
       // <meta HTTP-EQUIV="REFRESH" CONTENT="1; URL="></meta>
       document.head.appendChild(meta);
